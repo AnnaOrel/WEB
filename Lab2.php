@@ -42,4 +42,8 @@ $days = $months * 16;
 $days_per_language = $days / $num_languages;
 
 echo $days_per_language;
+
+echo "\n 12 \n";
+
+echo 8 ** 2;
 ?>
