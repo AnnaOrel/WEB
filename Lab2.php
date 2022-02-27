@@ -150,4 +150,62 @@
 	$my_num = printStringReturnNumber();
 	echo $my_num;
 	
+	echo "\n 16 \n";
+	
+	function increaseEnthusiasm(string $string): string
+	{
+		return $string . "!"
+	}
+	
+	echo increaseEnthusiasm("OH MY GOD HOW DO I DO THIS") . "\n";
+	
+	function repeatThreeTimes(string $string): string
+	{
+		return $string . $string . $string;
+	}
+	
+	echo repeatThreeTimes("I'M SCARED ") . "\n";
+	
+	echo increaseEnthusiasm(repeatThreeTimes("AAA"));
+	
+	function cut(string $string, int $first = 10): string
+	{
+		$k = min(strlen($string), $first);
+		$result = "";
+		for ($i = 0; $i < $k; $i++)
+			$result .= $string[$i];
+		return $result;
+	}
+	
+	echo "cut(kakorrhaphiraphobia) = " . cut("kakorraphiraphobia") . "\n";
+	echo "cut(kakorrhaphiraphobia, 5) = " . cut("kakorraphiraphobia", 5) . "\n";
+	
+	function recurseArray(array $arr, int $i = 0)
+	{
+		if ($i == count($arr))
+			return;
+		echo $arr[$i] . " ";
+		recurseArray($arr, $i + 1);
+		if ($i == 0)
+			echo "\n";
+	}
+	
+	$array = [6, 8, 5, 7, 8, 9, 0];
+	recurseArray($array);
+	
+	function digitSum(int $num)
+	{
+		$sum = 0;
+		while ($num > 0)
+		{
+			$sum += $num % 10;
+			$num /= 10;
+		}
+		if ($sum > 9)
+			return digitSum($sum);
+		else
+			return $sum;
+	}
+	
+	echo digitSum(635);
 ?>
