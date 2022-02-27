@@ -46,4 +46,21 @@ echo $days_per_language;
 echo "\n 12 \n";
 
 echo 8 ** 2;
+
+echo "\n 13 \n";
+
+$my_num = 546;
+
+$answer = $my_num;
+
+$answer += 2;
+
+$answer *= 2;
+
+$answer -= 2;
+
+$answer /= 2;
+
+$answer -= $my_num;
+echo $answer;
 ?>
