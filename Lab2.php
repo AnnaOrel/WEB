@@ -138,4 +138,16 @@
 		$i++;
 	}
 	echo $i . "\n";
+	
+	echo "\n 15 \n";
+	
+	function printStringReturnNumber(): int
+	{
+		echo "Srting";
+		return 6538;
+	}
+	
+	$my_num = printStringReturnNumber();
+	echo $my_num;
+	
 ?>
