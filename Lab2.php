@@ -1,6 +1,6 @@
 <?php
 
-//1.
+echo " 1 ";
 
 /* Imagine a lot of code here */
 
@@ -18,4 +18,17 @@ echo $very_bad_unclear_name;
 
 echo "\nYour order is: $very_bad_unclear_name.";
 
+echo "\n 2 \n";
+
+$first_number = 57;
+echo $first_number;
+
+echo "\n";
+
+$second_number = 374.325;
+echo "\n" . (32 - 20);
+
+$last_month = 1187.23;
+$this_month = 1089.98;
+echo $last_month - $this_month;
 ?>
