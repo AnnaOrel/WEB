@@ -307,5 +307,25 @@
 	for ($i = 0; $i < 20; $i++)
         echo str_repeat("x", $i + 1) . "\n";
 	
+	echo "\n 20 \n";
 	
+	$array = [34, 7, 4, 146, 78, 9, 765, 0, 546];
+    echo array_sum($array) / sizeof($array) . "\n";
+
+    echo array_sum(range(1, 100)) . "\n";
+
+    $arr = [76, 245, 9, 89];
+    print_r(array_map('sqrt', $arr));
+    echo "\n";
+
+    $numbers = range(1, 26);
+    $symbols = range('a', 'z');
+    $array = array_combine($symbols, $numbers);
+    print_r($array);
+    echo "\n";
+
+    $numbers = "1234567890";
+    $array = str_split($numbers, 2);
+    $result = array_sum($array);
+    echo $result;
 ?>
