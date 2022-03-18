@@ -266,4 +266,41 @@
 	
 	echo $array[sizeof($array) - 1] . "\n";
     echo $array[sizeof($array) - 2] . "\n";
+	
+	echo "\n 18 \n";
+	
+	function sumNum(int $a, int $b){
+        if($a + $b > 10) return true;
+        else return false;
+    }
+	echo sumNum(3, 4);
+	echo sumNum(7, 9);
+    
+    function equalNum(int $a, int $b){
+        if($a == $b) return true;
+        else return false;
+    }
+	echo equalNum(3, 3);
+	echo equalNum(1, 3);
+
+    echo $test == 0 ? "верно\n" : "ложно\n";
+
+    $age = rand(0, 150);
+    $sum = 0;
+    echo $age . "\n";
+    if ($age < 10) echo "{$age} < 10\n";
+    else if ($age > 99) echo "{$age} > 99\n";
+    else{
+        while ($age > 0)
+		{
+            $sum += $age % 10;
+            $age /= 10;
+        }
+        echo ($sum > 9) ? "сумма цифр двузначная" : "сумма цифр однозначная";
+    echo "\n";
+  
+    $array = [5, 7, 8];
+    if (count($array) == 3) echo array_sum($array) . "\n";
+	
+	
 ?>
