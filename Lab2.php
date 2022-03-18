@@ -302,5 +302,10 @@
     $array = [5, 7, 8];
     if (count($array) == 3) echo array_sum($array) . "\n";
 	
+	echo "\n 19 \n";
+	
+	for ($i = 0; $i < 20; $i++)
+        echo str_repeat("x", $i + 1) . "\n";
+	
 	
 ?>
