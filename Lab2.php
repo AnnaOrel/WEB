@@ -166,7 +166,7 @@
 	
 	echo repeatThreeTimes("I'M SCARED ") . "\n";
 	
-	echo increaseEnthusiasm(repeatThreeTimes("AAA"));
+	echo increaseEnthusiasm(repeatThreeTimes("AAA")) . "\n";
 	
 	function cut(string $string, int $first = 10): string
 	{
@@ -207,5 +207,63 @@
 			return $sum;
 	}
 	
-	echo digitSum(635);
+	echo "\n" . digitSum(635) . "\n";
+	
+	echo "\n 17 \n";
+	
+	$size = 7;
+	$array = ["x"];
+	for ($i = 0; $i < $size; $i++)
+		$array[$i] = $array[$i - 1] . "x";
+	
+	function arrayPrint(array $array)
+	{
+		foreach ($array as $element)
+			echo $element . " ";
+		echo "\n";
+	}
+	
+	arrayPrint($array);
+	
+	function arrayFill(string $string, int $num): array
+	{
+		$array = [];
+		for ($i = 0; $i < $num; $i++)
+			$array[$i] = $string;
+		return $array;
+	}
+	
+	arrayPrint(arrayFill("x", 5));
+	echo "\n"
+	
+	$array = [[4, 7], [6, 5, 3, 8], [1, 9], [2]];
+	$sum = 0;
+	foreach($array as $element)
+		$sum += array_sum($element);
+	echo $sum . "\n";
+	
+	$array = [];
+	$element = 1
+	for ($i = 0; $i < 3; $i++)
+		for ($j = 0; $j < 3; $j++)
+			$array[$i][$j] = $element++;
+	arrayPrint($array);
+	echo "\n";
+	
+	$array = [2, 5, 3, 9];
+	$result = $array[0] * $array[1] + $array[2] * $array[3];
+	echo $result . "\n";
+	
+	$user = ['Name' => 'Орел', 'Surname' => 'Анна', 'Patronymic' => 'Кузьминична', 27, 07, 2002, 13];
+    echo $user['Surname'] . " " . $user['Name'] . " " . $user['Pаtronymic'] . "\n";
+	
+	$date = ['Year' => '2022', 'Month' => '03', 'Day' => '17'];
+    echo "{$date['Year']}-{$date['Month']}-{$date['Day']}\n";
+	
+	$array = ['a', 'b', 'c', 'd', 'e'];
+    $size = count($array);
+    echo $size . "\n";
+	
+	echo $array[sizeof($array) - 1] . "\n";
+    echo $array[sizeof($array) - 2] . "\n";
 ?>
